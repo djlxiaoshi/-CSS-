@@ -1,0 +1,63 @@
+	#container{
+		perspective: 500px;
+		font-size: 0;
+		}
+	#container div{
+		font-size: 6rem;
+		width: 30rem;height: 10rem;
+		display: inline-block;
+		color: #fff;
+		line-height: 10rem;
+		
+		position: relative;
+		overflow: hidden;
+		
+		white-space: nowrap;
+	}
+	#container div:first-of-type{
+		transform: rotateY(-40deg);
+		transform-origin: top right;
+		background: #E5233E;}
+	#container div:last-of-type{
+		transform: rotateY(60deg);
+		transform-origin: top left;
+		background: #B31E31;
+		}
+	
+	#container div span{
+		position: absolute;
+		width: 400%;  
+	}
+	#container div:first-of-type span{
+		transform: translateX(60rem);
+		animation: left_div 14s linear infinite;
+		
+		text-shadow: 20px 0px 4px rgba(0,0,0,0.3);
+	}
+		
+	#container div:last-of-type span{
+		transform: translateX(30rem);
+		animation: right_div 14s linear infinite ;
+	}
+	
+	@keyframes right_div{
+		to{transform: translateX(-130rem);}
+	}
+	
+	@keyframes left_div{
+		to{transform: translateX(-100rem);}
+	}
+	
+	
+	@media all and (max-width: 993px) {
+	  #container {
+	    perspective: none;
+	  }
+	  #container div:last-of-type { 
+	    opacity: 0; 
+	    height: 0;
+	  }
+	  #container div:first-of-type {
+	    width: 80%;
+	  }
+	}
