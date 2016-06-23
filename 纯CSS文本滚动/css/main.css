@@ -41,11 +41,11 @@
 	}
 	
 	@keyframes right_div{
-		to{transform: translateX(-200rem);}
+		to{transform: translateX(-210rem);}
 	}
 	
 	@keyframes left_div{
-		to{transform: translateX(-170rem);}
+		to{transform: translateX(-180rem);}
 	}
 	
 	
